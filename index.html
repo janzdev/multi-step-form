@@ -4,23 +4,22 @@
     <meta charset="utf-8" />
     <title>Multi Step Form</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   </head>
   <body>
     <div class="container">
       <header>
         <h5>Sign<span>up</span></h5>
-        <p>Already have an account?<a href="login.php"> Login</a></p>
       </header>
+      <!-- Multi Step Form start -->
       <div class="progress-bar">
         <div class="step">
-          <p>Name</p>
+          <p>Personal</p>
           <div class="bullet">
             <span>1</span>
           </div>
           <div class="check fas fa-check"></div>
         </div>
-        <div class="step">
+        <div class="step hide">
           <p>Birth</p>
           <div class="bullet">
             <span>2</span>
@@ -34,48 +33,57 @@
           </div>
           <div class="check fas fa-check"></div>
         </div>
-        <div class="step">
-          <p>Account</p>
+        <div class="step hide">
+          <p>Contact</p>
           <div class="bullet">
             <span>4</span>
           </div>
           <div class="check fas fa-check"></div>
         </div>
         <div class="step">
-          <p>Submit</p>
+          <p>Accounts</p>
           <div class="bullet">
             <span>5</span>
           </div>
           <div class="check fas fa-check"></div>
         </div>
       </div>
+      <!-- Multi Step Form end -->
       <div class="form-outer">
         <form action="#">
+          <!-- First Slide Page start-->
           <div class="page slide-page">
-            <div class="title">Basic Info:</div>
+            <div class="title">Personal Details:</div>
+
             <div class="field">
               <div class="label">Lastname</div>
               <input type="text" name="lastname" required />
             </div>
+
             <div class="field">
               <div class="label">Firstname</div>
               <input type="text" name="firstname" required />
             </div>
+
             <div class="field">
               <div class="label">Middlename</div>
               <input type="text" name="middlename" required />
             </div>
-            <div class="field">
+
+            <div class="field option">
               <button class="firstNext next">Next</button>
+              <p>Already have an account?<a href="login.php"> Login</a></p>
             </div>
           </div>
+          <!-- First Slide Page end-->
 
+          <!-- Second Slide Page start-->
           <div class="page">
-            <div class="title">Birthdate:</div>
             <div class="field">
               <div class="label">Nickname</div>
               <input type="text" name="nickname" required />
             </div>
+
             <div class="field">
               <div class="label">Gender</div>
               <select name="gender" required>
@@ -88,21 +96,36 @@
               <div class="label">Birthdate</div>
               <input type="date" name="birthdate" required />
             </div>
+
+            <div class="field">
+              <div class="label">Address</div>
+              <input type="text" name="address" required />
+            </div>
+
             <div class="field btns">
               <button class="prev-1 prev">Previous</button>
               <button class="next-1 next">Next</button>
             </div>
           </div>
+          <!-- Second Slide Page end-->
 
+          <!-- Third Slide Page start-->
           <div class="page">
-            <div class="title">Date of Birth:</div>
+            <div class="title">Contact Info:</div>
+
             <div class="field">
-              <div class="label">Nickname</div>
-              <input type="text" name="nickname" />
+              <div class="label">Cellphone No.</div>
+              <input type="number" required />
             </div>
+
             <div class="field">
-              <div class="label">Date</div>
-              <input type="text" />
+              <div class="label">Contact Person</div>
+              <input type="text" required />
+            </div>
+
+            <div class="field">
+              <div class="label">Contact Person No.</div>
+              <input type="number" required />
             </div>
 
             <div class="field btns">
@@ -110,43 +133,62 @@
               <button class="next-2 next">Next</button>
             </div>
           </div>
+          <!-- Third Slide Page end-->
+
+          <!-- Fourth Slide Page start-->
           <div class="page">
-            <div class="title">Contact Info:</div>
+            <div class="title hides">Contact Info</div>
             <div class="field">
-              <div class="label">Cell No</div>
-              <input type="text" />
+              <div class="label">Email</div>
+              <input type="email" placeholder="example@gmail.com" required />
             </div>
+
             <div class="field">
-              <div class="label">Contact Person</div>
-              <input type="Number" />
+              <div class="label">Year Level</div>
+              <input type="Number" required />
             </div>
+
             <div class="field">
-              <div class="label">Contact Person No</div>
-              <input type="Number" />
+              <div class="label">Course</div>
+              <input type="text" required />
             </div>
+
             <div class="field btns">
               <button class="prev-3 prev">Previous</button>
               <button class="next-3 next">Next</button>
             </div>
           </div>
+          <!-- Fourth Slide Page end-->
+
+          <!-- Fifth Slide Page start-->
           <div class="page">
             <div class="title">Login Details:</div>
+
             <div class="field">
-              <div class="label">Username</div>
-              <input type="text" />
+              <div class="label">Student ID No.</div>
+              <input type="text" required />
             </div>
+
             <div class="field">
               <div class="label">Password</div>
-              <input type="password" />
+              <input type="password" required />
             </div>
+
+            <div class="field">
+              <div class="label">Confirm Password</div>
+              <input type="password" required />
+            </div>
+
             <div class="field btns">
               <button class="prev-4 prev">Previous</button>
               <button class="submit">Submit</button>
             </div>
           </div>
+          <!-- Fifth Slide Page end-->
         </form>
       </div>
     </div>
     <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   </body>
 </html>
